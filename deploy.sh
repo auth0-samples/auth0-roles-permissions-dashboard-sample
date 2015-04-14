@@ -119,10 +119,12 @@ fi
 
 # 4. Run gulp  
 if [ -e "$DEPLOYMENT_TARGET/gulpfile.js" ]; then  
+  cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install gulp
   exitWithMessageOnError "Installing gulp failed"  
   ./node_modules/.bin/gulp build
   exitWithMessageOnError "Gulp failed"  
+  cd - > /dev/null
 fi  
 
 ##################################################################################################################################

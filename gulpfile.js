@@ -126,7 +126,7 @@ gulp.task('js', function() {
  */
 gulp.task('js-minify', ['js'], function() {
   return gulp.src(config.outputDirectory + '/scripts.js')
-    // Breaks on windows: .pipe(uglify())
+    .pipe(uglify())
     .pipe(rename(function(path) {
       path.extname = '.min.js'
     }))

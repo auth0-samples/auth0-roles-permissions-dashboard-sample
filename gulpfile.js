@@ -137,4 +137,4 @@ gulp.task('js-minify', ['js'], function() {
  * Tasks.
  */
 gulp.task('start', function (cb) { runSequence(['css-watch', 'js-watch'], 'serve', cb); });
-gulp.task('build', ['clean', 'css-minify', 'js-minify']);
+gulp.task('build', function (cb) { runSequence('clean', ['css-minify', 'js-minify'], cb); });

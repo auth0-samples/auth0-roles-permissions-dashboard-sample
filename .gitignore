@@ -29,3 +29,5 @@ node_modules
 # Config and data.
 config.json
 data.json
+
+dist

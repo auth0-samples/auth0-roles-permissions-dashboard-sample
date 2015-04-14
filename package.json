@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha --compilers js:babel/register"
   },
+  "engines": {
+    "node": "0.12.x"
+  },
   "author": "Auth0",
   "license": "MIT",
   "dependencies": {

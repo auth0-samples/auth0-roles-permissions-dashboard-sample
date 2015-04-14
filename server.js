@@ -49,7 +49,9 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Configure static files.
+logger.info('Serving static files from: ' + path.join(__dirname, 'public'));
 app.use(express.static(path.join(__dirname, 'public')));
+logger.info('Serving static files from: ' + path.join(__dirname, 'dist'));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Initialize the routes.

@@ -44,6 +44,9 @@ export default class RolePermissionsTable extends React.Component {
               {this.state.role.permissions.map((permission_id, i) => {
 
               	var permission = _.find(this.state.permissions, { 'id': permission_id });
+                if (!permission) {
+                  return (<div></div>);
+                }
 
                 return (
                     <tr key={permission.id}>

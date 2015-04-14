@@ -132,6 +132,9 @@ export default class Roles extends BaseView {
                   <BS.ModalTrigger modal={<RoleModal apps={this.state.apps} onRoleSave={this.saveRole.bind(this)} role={role} />}>
                     <span className="table-button glyphicon glyphicon-cog pull-right" aria-hidden="true"></span>
                   </BS.ModalTrigger>
+                  <BS.ModalTrigger modal={<PromptModal title="Confirm Delete" message="Are you sure you want to delete this role?" onAcceptDialog={() => this.deleteRole(role)} />}>
+                    <span className="table-button glyphicon glyphicon-trash pull-right" aria-hidden="true" style={{marginRight: 5 + 'px'}}></span>
+                  </BS.ModalTrigger>
                   <span className="table-button glyphicon glyphicon-zoom-in pull-right" onClick={() => this.toggleRole(role)} style={{marginRight: 5 + 'px'}}></span>
                 </h3>
               </div>

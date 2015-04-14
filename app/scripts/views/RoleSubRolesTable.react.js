@@ -40,8 +40,9 @@ export default class RoleSubRolesTable extends React.Component {
               {this.state.role.sub_roles.map((role_id, i) => {
 
               	var role = _.find(this.state.roles, { 'id': role_id });
-              	if (!role) 
+              	if (!role) {
               		return (<div></div>);
+                }
 
                 return (
                     <tr key={role.id}>

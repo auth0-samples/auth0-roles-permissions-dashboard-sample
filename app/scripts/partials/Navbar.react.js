@@ -47,7 +47,7 @@ export default class Navbar extends React.Component {
     }
 
     // Customize the brand.
-    let brand = <Router.Link to='app'>Auth0 Claims Manager</Router.Link>;
+    let brand = <Router.Link to='app'>Auth0 Roles & Permissions Dashboard</Router.Link>;
 
     // Customize the profime menu.
     let profileMenuContent = (

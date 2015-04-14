@@ -115,10 +115,10 @@ function buildScripts(production, watch) {
   return run();
 }
 gulp.task('js-watch', function() { 
-  buildScripts(false, true); 
+  return buildScripts(false, true); 
 });
 gulp.task('js', function() { 
-  buildScripts(true, false); 
+  return buildScripts(true, false); 
 });
 
 /*

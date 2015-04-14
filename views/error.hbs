@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="jumbotron">
+          <h1 class="center">Oops... <small><font color="red">{{ status }}</font></small></h1>
+          <br />
+          <p>There was an error loading the page you requested:</p>
+          <blockquote>
+          {{ message }}
+          </blockquote>
+          {{#if isDevelopment}}
+          <br />
+          <pre>{{ json error }}</pre>
+          {{/if}}
+
+          <br />
+          <a href="/" class="btn btn-large btn-info">
+            <i class="icon-home icon-white"></i> Take Me Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

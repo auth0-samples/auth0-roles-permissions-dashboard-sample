@@ -8,6 +8,7 @@ import BaseView from '../components/BaseView.react';
 import PageHeader from '../partials/PageHeader.react';
 import PromptModal from '../partials/PromptModal.react';
 
+import EffectiveModal from './UserEffectivePermissionsModal.react'
 import UserRolesModal from './UserRolesModal.react';
 import UserRoleLabel from './UserRoleLabel.react';
 
@@ -93,6 +94,11 @@ export default class Users extends BaseView {
                       <td>
                         <BS.ModalTrigger modal={<UserRolesModal user={user} roles={this.state.roles} user_roles={user_roles} onDeleteRoles={(roles) => this.deleteRoles(user, roles)} />}>
                           <span className="table-button glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </BS.ModalTrigger>
+                      </td>
+                      <td>
+                        <BS.ModalTrigger modal={<EffectiveModal user={user} />}>
+                          <span className="table-button glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                         </BS.ModalTrigger>
                       </td>
                     </tr>

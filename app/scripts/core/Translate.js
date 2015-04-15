@@ -47,6 +47,10 @@ let labels = {
 	'user_roles.add.error': 'Error adding user roles.',
 	'user_roles.add.success': 'User roles added.',
 
+	'user_effective_permissions.load': 'Loading effective permissions...',
+	'user_effective_permissions.load.error': 'Error loading effective permissions.',
+	'user_effective_permissions.load.success': 'Effective permissions loaded.',
+
 	'user_roles.delete': 'Deleting user role...',
 	'user_roles.delete.error': 'Error deleting user role.',
 	'user_roles.delete.success': 'User role deleted.',

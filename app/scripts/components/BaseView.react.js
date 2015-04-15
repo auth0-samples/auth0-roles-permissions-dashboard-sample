@@ -25,7 +25,7 @@ export default class BaseView extends React.Component {
   }
 
   _onStoreChange() {
-    if (this.getStateFromStores()) {
+    if (this.getStateFromStores) {
       this.setState(this.getStateFromStores());
     }
   }

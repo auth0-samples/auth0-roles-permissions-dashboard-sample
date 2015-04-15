@@ -38,6 +38,11 @@ class ApiClient {
 		return this.http.get('/api/users').promise;
 	}
 
+
+	getUserEffectivePermissions(user_id) {
+		return this.http.get('/api/users/' + user_id + '/effective').promise;
+	}
+
 	addUserRoles(user, roles) {
 		return this.http.patch('/api/users/' + user.user_id + '/roles', null, { roles: roles }).promise;
 	}

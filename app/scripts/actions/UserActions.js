@@ -46,6 +46,22 @@ class UserActions {
 			roles: roles
 		});
 	}
+
+	loadEffectivePermissions(user_id) {
+		Dispatcher.handleViewAction({ 
+			type: Events.LOAD_USER_EFFECTIVE_PERMISSIONS,
+			user_id: user_id
+		});
+	}
+
+	effectivePermissionsLoaded(user_id, roles, permissions) {
+		Dispatcher.handleServerAction({ 
+			type: Events.USER_EFFECTIVE_PERMISSIONS_LOADED,
+			user_id: user_id,
+			roles: roles,
+			permissions: permissions
+		});
+	}
 }
 
 export default new UserActions();

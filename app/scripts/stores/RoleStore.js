@@ -28,6 +28,12 @@ class RoleStore extends CollectionStore {
 		return this.tryGet(id).name;
 	}
 
+	getAllById(id_list) {
+		return _.filter(this.getAll(), (r) => {
+			return (id_list || []).indexOf(r.id) > -1;
+		});
+	}
+
 	handleAction(action) {
 		switch (action.type) {
 			// Load the roles.

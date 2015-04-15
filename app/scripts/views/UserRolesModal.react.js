@@ -20,10 +20,8 @@ export default class UserRolesModal extends React.Component {
 			selected_roles: []
 		};
 
-		if (this.props.user_roles) {
-			this.state.roles = _.filter(this.props.roles, function(r) {
-				return this.props.user_roles.indexOf(r.id) > -1;;
-			});
+		if (this.props.user_roles && this.props.user_roles.length > 0) {
+			this.state.roles = this.props.user_roles;
 		}
 	}
 

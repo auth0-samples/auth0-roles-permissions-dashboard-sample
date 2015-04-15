@@ -73,7 +73,7 @@ export default class Users extends BaseView {
             </thead>
             <tbody>
               {filteredUsers.map((user, i) => {
-                var user_roles = ((user.app_metadata || {}).roles || []);
+                var user_roles = RoleStore.getAllById((user.app_metadata || {}).roles);
                 var user_roles_counter = (<div></div>);
                 if (user_roles.length > 0) {
                     user_roles_counter = (<span className="badge progress-bar-info">{user_roles.length}</span>);
@@ -91,7 +91,7 @@ export default class Users extends BaseView {
                         </BS.ModalTrigger>
                       </td>
                       <td>
-                        <BS.ModalTrigger modal={<UserRolesModal user={user} roles={this.state.roles} onDeleteRoles={(roles) => this.deleteRoles(user, roles)} />}>
+                        <BS.ModalTrigger modal={<UserRolesModal user={user} roles={this.state.roles} user_roles={user_roles} onDeleteRoles={(roles) => this.deleteRoles(user, roles)} />}>
                           <span className="table-button glyphicon glyphicon-trash" aria-hidden="true"></span>
                         </BS.ModalTrigger>
                       </td>

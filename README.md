@@ -58,9 +58,33 @@ Finally add the following settings as environment variables or in a **config.jso
 
 ### Rule
 
-The following rule will call out to the dashboard's API and add the permissions to the user:
+The following rule will call out to the dashboard's API and add the permissions to the user's token:
 
-TODO
+```
+function (user, context, callback) {
+  if (!user.roles || user.roles.length === 0) { 
+    return callback(null, user, context);
+  }
+
+  request.post({
+    url: configuration.PERMISSIONS_API_BASE_URL + 
+            '/api/apps/' + context.clientID + '/permissions',
+    json: {
+      roles: user.roles
+    },
+    timeout: 5000
+  }, function(err, response, body) {
+    if (err) 
+      return callback(new Error(err));
+    user.permissions = body.permissions;
+    return callback(null, user, context);
+  });
+}
+```
+
+In order for this to work add a configuration setting in the [Auth0 dashboard](https://manage.auth0.com/#/rules) that points to the base url of where the dashboard is deployed. Eg:
+
+`PERMISSIONS_API_BASE_URL` = `https://fabrikam-roles-permissions.azurewebsites.net`
 
 ## Debugging
 

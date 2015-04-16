@@ -111,5 +111,4 @@ node server
 
 ### Microsoft Azure Web Sites
 
-TODO
-
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)

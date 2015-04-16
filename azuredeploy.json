@@ -40,15 +40,15 @@
     },
     "AUTH0_CLIENT_ID": {
       "type": "string",
-      "defaultValue": ""
+      "defaultValue": "CLIENT_ID_FOR_THIS_APP"
     },
     "AUTH0_CLIENT_SECRET": {
       "type": "string",
-      "defaultValue": ""
+      "defaultValue": "CLIENT_SECRET_FOR_THIS_APP"
     },
     "AUTH0_APIV2_TOKEN": {
       "type": "string",
-      "defaultValue": ""
+      "defaultValue": "YOUR_APIV2_TOKEN"
     },
     "ENV": {
       "type": "string",

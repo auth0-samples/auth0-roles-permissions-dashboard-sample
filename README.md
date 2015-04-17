@@ -2,6 +2,16 @@
 
 Dashboard that allows you to manage roles and permissions for your Auth0 users. Take a look at the [wiki](https://github.com/auth0/auth0-roles-permissions-dashboard-sample/wiki) for more information about deployment and sample integrations.
 
+## Demo Environment
+
+- Dashboard: http://perm-dashboard.azurewebsites.net/
+- HR Tool (sample application): http://perm-hr.azurewebsites.net
+- Users:
+  - john@fabrikamcorp.com Passw0rd!
+  - mary@fabrikamcorp.com Passw0rd!
+  - jake@fabrikamcorp.com Passw0rd!
+  - kevin@fabrikamcorp.com Passw0rd!
+
 ## Overview
 
 The dashboard allows you to manage permissions for the different applications you created in Auth0.

@@ -7,10 +7,10 @@ Dashboard that allows you to manage roles and permissions for your Auth0 users. 
 - Dashboard: http://perm-dashboard.azurewebsites.net/
 - HR Tool (sample application): http://perm-hr.azurewebsites.net
 - Users:
-  - john@fabrikamcorp.com Passw0rd!
-  - mary@fabrikamcorp.com Passw0rd!
-  - jake@fabrikamcorp.com Passw0rd!
-  - kevin@fabrikamcorp.com Passw0rd!
+  - john@fabrikamcorp.com `password`
+  - mary@fabrikamcorp.com `password`
+  - jake@fabrikamcorp.com `password`
+  - kevin@fabrikamcorp.com `password`
 
 ## Overview
 

@@ -1,6 +1,6 @@
 var React = require('react');
 var TokenStore = require('./stores/TokenStore');
-var ActionLogger = require('./core/ActionLogger');
+var LogStore = require('./stores/LogStore');
 var ApplicationActions = require('./actions/ApplicationActions');
 
 var App = {
@@ -11,9 +11,6 @@ var App = {
 
     // Load applications on startup.
     ApplicationActions.load();
-
-    // Log every dispatcher action.
-    ActionLogger.init();
 
     // Load the user's session from local storage if possible.
     TokenStore.init();

@@ -14,7 +14,7 @@
   "dependencies": {
     "babel": "^5.0.9",
     "babelify": "^6.0.1",
-    "backbone": "^1.1.2",
+    "backbone": "1.1.2",
     "body-parser": "^1.12.2",
     "bootstrap": "^3.3.4",
     "browserify": "^9.0.7",

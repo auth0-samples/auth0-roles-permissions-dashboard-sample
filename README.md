@@ -35,3 +35,8 @@ Finally, these roles can be assigned to your users. This information will be per
 And to test this you can view the user's effective permissions. This will calculate all the permissions that apply to this user by going over the user's roles and sub-roles (recursively).
 
 ![](http://cdn.auth0.com/docs/img/roles-perm-dashboard-users-effective.png)
+
+## To utilise MongoDB as your store
+
+1. Add a nconf variable called `MONGODB_CONNECTION_STRING`
+2. In `lib/routes/api.js` on line 3 change `var db = require("../file");` to `var db = require("../db");`

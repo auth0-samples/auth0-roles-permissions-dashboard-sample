@@ -36,7 +36,13 @@ And to test this you can view the user's effective permissions. This will calcul
 
 ![](http://cdn.auth0.com/docs/img/roles-perm-dashboard-users-effective.png)
 
-## To utilise MongoDB as your store
+## Roles and Permissions persistence
+
+By default, roles and permissions are stored in a `data.json` file which is created by the application teh first time you save a role.
+
+A MongoDB provider is included which allows you to store the information in a MongoDB file, seperated from the node server.
+
+The data.json file has the following format:
 
 1. Add a nconf variable called `MONGODB_CONNECTION_STRING`
 2. In `lib/routes/api.js` on line 3 change `var db = require("../file");` to `var db = require("../db");`

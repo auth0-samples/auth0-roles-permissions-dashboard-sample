@@ -21,7 +21,7 @@
       , callbackURL: window.location.origin + '/signin-auth0'
       , responseType: 'code'
       , authParams: {
-          scope: 'openid profile',
+          scope: 'openid name email',
           state: 'xsrf=' + xsrf + '&ru=' + '@ViewBag.ReturnUrl'
       }
     });

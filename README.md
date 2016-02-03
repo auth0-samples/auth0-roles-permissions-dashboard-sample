@@ -35,3 +35,14 @@ Finally, these roles can be assigned to your users. This information will be per
 And to test this you can view the user's effective permissions. This will calculate all the permissions that apply to this user by going over the user's roles and sub-roles (recursively).
 
 ![](http://cdn.auth0.com/docs/img/roles-perm-dashboard-users-effective.png)
+
+## Roles and Permissions persistence
+
+By default, roles and permissions are stored in a `data.json` file which is created by the application teh first time you save a role.
+
+A MongoDB provider is included which allows you to store the information in a MongoDB file, seperated from the node server.
+
+The data.json file has the following format:
+
+1. Add a nconf variable called `MONGODB_CONNECTION_STRING`
+2. In `lib/routes/api.js` on line 3 change `var db = require("../file");` to `var db = require("../db");`
